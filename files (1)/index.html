@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza Kingdom 🍕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating Nav -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">🍕 Pizza Kingdom</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Order Now</a>
+    <button class="hamburger" id="hamburger">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu">✕</button>
+    <ul>
+      <li><a href="#hero" onclick="closeMobileMenu()">Home</a></li>
+      <li><a href="#menu" onclick="closeMobileMenu()">Menu</a></li>
+      <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#testimonials" onclick="closeMobileMenu()">Reviews</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-circles">
+      <span class="circle c1"></span>
+      <span class="circle c2"></span>
+      <span class="circle c3"></span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">👑 Est. 1998 · The Original</div>
+      <h1 class="hero-title">
+        Welcome to<br /><span class="brand-text">Pizza Kingdom</span>
+      </h1>
+      <p class="hero-sub">
+        Handcrafted with love · Wood-fired perfection · Delivered to your door
+      </p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-primary">Explore Menu</a>
+        <a href="#about" class="btn-outline">Our Story</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>50+</span><small>Varieties</small></div>
+        <div class="stat"><span>15K+</span><small>Happy Customers</small></div>
+        <div class="stat"><span>4.9⭐</span><small>Rating</small></div>
+      </div>
+    </div>
+    <div class="hero-pizza-wrap">
+      <div class="pizza-3d">
+        <div class="pizza-shadow"></div>
+        <div class="pizza-plate">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Pizza" class="pizza-img" />
+          <div class="pizza-glow"></div>
+        </div>
+        <div class="floating-badge badge-top">🌿 Fresh</div>
+        <div class="floating-badge badge-right">🔥 Hot</div>
+        <div class="floating-badge badge-bottom">⚡ Fast</div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- FEATURES BAR -->
+  <section class="features-bar">
+    <div class="feature-item">
+      <span class="feat-icon">🚀</span>
+      <div>
+        <strong>30 Min Delivery</strong>
+        <small>Guaranteed or free</small>
+      </div>
+    </div>
+    <div class="feature-item">
+      <span class="feat-icon">🌿</span>
+      <div>
+        <strong>100% Fresh Ingredients</strong>
+        <small>Sourced daily</small>
+      </div>
+    </div>
+    <div class="feature-item">
+      <span class="feat-icon">👨‍🍳</span>
+      <div>
+        <strong>Master Chefs</strong>
+        <small>25 years of craft</small>
+      </div>
+    </div>
+    <div class="feature-item">
+      <span class="feat-icon">♻️</span>
+      <div>
+        <strong>Eco Packaging</strong>
+        <small>Zero plastic</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section class="menu-section" id="menu">
+    <div class="section-header">
+      <span class="section-tag">🍕 Our Menu</span>
+      <h2>Crafted for <em>Legends</em></h2>
+      <p>Each pizza is a work of art, made fresh to order.</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab active" data-tab="all">All</button>
+      <button class="tab" data-tab="veg">Veg</button>
+      <button class="tab" data-tab="nonveg">Non-Veg</button>
+      <button class="tab" data-tab="special">Special</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+      <!-- JS will render cards -->
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="about-img-wrap">
+      <div class="about-img-card">
+        <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=600&q=80" alt="Chef" />
+        <div class="about-img-badge">25+ Years of Mastery</div>
+      </div>
+      <div class="about-img-small">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80" alt="Pizza" />
+      </div>
+    </div>
+    <div class="about-content">
+      <span class="section-tag">👑 Our Story</span>
+      <h2>Born from Passion,<br /><em>Perfected by Fire</em></h2>
+      <p>Pizza Kingdom was founded in 1998 by Chef Marco Rossi in a small Naples-inspired kitchen in the heart of the city. Our wood-fired ovens reach 900°F — hotter than any conventional oven — creating a perfectly charred crust you simply can't replicate.</p>
+      <p>Every topping is sourced locally. Every sauce is hand-stirred. Every pizza is a promise.</p>
+      <div class="about-highlights">
+        <div class="highlight">
+          <strong>900°F</strong><small>Wood Fire Temp</small>
+        </div>
+        <div class="highlight">
+          <strong>48hr</strong><small>Dough Fermentation</small>
+        </div>
+        <div class="highlight">
+          <strong>Zero</strong><small>Preservatives</small>
+        </div>
+      </div>
+      <a href="#menu" class="btn-primary">See Our Pizzas</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-header">
+      <span class="section-tag">❤️ Reviews</span>
+      <h2>What Our <em>Royals</em> Say</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="tcard">
+        <div class="tcard-stars">⭐⭐⭐⭐⭐</div>
+        <p>"The Truffle Royale pizza is out of this world. I've tried pizza in Italy and this rivals it. Will always come back!"</p>
+        <div class="tcard-author"><img src="https://i.pravatar.cc/50?img=12" /><span>Aarav Mehta</span></div>
+      </div>
+      <div class="tcard featured-review">
+        <div class="tcard-stars">⭐⭐⭐⭐⭐</div>
+        <p>"Delivered in 22 minutes, still hot, crust perfectly crispy. Pizza Kingdom never disappoints. Best pizza in the city, no debate."</p>
+        <div class="tcard-author"><img src="https://i.pravatar.cc/50?img=5" /><span>Priya Sharma</span></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">⭐⭐⭐⭐⭐</div>
+        <p>"Ordered the BBQ Chicken Deluxe for my birthday party. Everyone was blown away. Became our family's go-to place!"</p>
+        <div class="tcard-author"><img src="https://i.pravatar.cc/50?img=33" /><span>Rohan Verma</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / ORDER SECTION -->
+  <section class="contact-section" id="contact">
+    <div class="contact-left">
+      <span class="section-tag">📞 Get In Touch</span>
+      <h2>Order or<br /><em>Visit Us Today</em></h2>
+      <div class="contact-info">
+        <div class="info-item">📍 <span>12, Kingdom Road, Food Court, Greater Noida</span></div>
+        <div class="info-item">📞 <span>+91 98765 43210</span></div>
+        <div class="info-item">🕐 <span>Mon–Sun: 10 AM – 11 PM</span></div>
+        <div class="info-item">📧 <span>hello@pizzakingdom.in</span></div>
+      </div>
+      <div class="social-links">
+        <a href="#">📘 Facebook</a>
+        <a href="#">📸 Instagram</a>
+        <a href="#">🐦 Twitter</a>
+      </div>
+    </div>
+    <div class="contact-right">
+      <form class="order-form" id="orderForm">
+        <h3>Place Your Order 🍕</h3>
+        <input type="text" placeholder="Your Name" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="text" placeholder="Delivery Address" required />
+        <select required>
+          <option value="">Choose Pizza</option>
+          <option>Margherita Classic</option>
+          <option>Truffle Royale</option>
+          <option>BBQ Chicken Deluxe</option>
+          <option>Garden Paradise</option>
+          <option>Paneer Tikka Special</option>
+          <option>Pepperoni King</option>
+        </select>
+        <select>
+          <option>Medium (8")</option>
+          <option>Large (12")</option>
+          <option>XL (14")</option>
+        </select>
+        <textarea placeholder="Special instructions (optional)..."></textarea>
+        <button type="submit" class="btn-primary full-width">👑 Place Royal Order</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">🍕 Pizza Kingdom</div>
+        <p>Where every bite is a royal experience.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#hero">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Support</h4>
+        <a href="#">Track Order</a>
+        <a href="#">FAQs</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Pizza Kingdom. Made with ❤️ & 🍕</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
